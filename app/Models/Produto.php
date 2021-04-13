@@ -9,9 +9,9 @@ class Produto extends Model
     protected $fillable = ['produto_nome', 'produto_descricao', 'produto_preco','estoque'];
     protected $dates = ['deleted_at'];
 
-    public function produtos()
+    public function pedido()
     {
-        return $this->hasMany('App\Models\Produto');
+        return $this->belongs('App\Models\Pedido');
     }
     
 }

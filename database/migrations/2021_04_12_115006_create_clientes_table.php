@@ -18,7 +18,9 @@ class CreateClientesTable extends Migration
             $table->string('cliente_nome', 100);
             $table->string('cliente_telefone', 12);
             $table->string('cliente_cep',9);
+            $table->string('cliente_endereco',500)->nullable();
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

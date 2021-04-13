@@ -6,11 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pedido extends Model
 {
-    protected $fillable = ['pedido_data','finalizado','cliente_id','quantidade'];
+    protected $fillable = ['pedido_data','finalizado','cliente_id','produto_id','quantidade'];
     protected $date = ['deleted_at'];
 
-    function pedido()
+    function cliente()
     {
-        return $this->hasMany('App\Models\Pedido');
+        return $this->belongs('App\Models\Cliente');
+    }
+
+    function produto()
+    {
+        return $this->hasMany('App\Models\Produto');
     }
 }

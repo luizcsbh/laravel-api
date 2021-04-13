@@ -17,12 +17,11 @@ class CreatePedidosTable extends Migration
             $table->increments('id');
             $table->date('pedido_data');
             $table->enum('finalizado',['sim','não']);
-            $table->integer('cliente_id')->unsigned();
+            $table->unsignedInteger('cliente_id');
             $table->foreign('cliente_id')
-                ->references('id')
-                ->on('clientes')
+                ->references('id')->on('clientes')
                 ->onDelete('cascade');
-            $table->integer('produto_id')->unsigned();
+            $table->unsignedInteger('produto_id');
             $table->foreign('produto_id')
                 ->references('id')
                 ->on('produtos')
@@ -30,6 +29,7 @@ class CreatePedidosTable extends Migration
             $table->integer('quantidade');    
             $table->timestamps();
             $table->softDeletes();
+            $table->engine = 'InnoDB';
         });
     }
 

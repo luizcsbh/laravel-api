@@ -22,6 +22,7 @@ class CreateProdutosTable extends Migration
             $table->integer('estoque');
             $table->timestamps();
             $table->softDeletes();
+            $table->engine = 'InnoDB';
         });
     }
 

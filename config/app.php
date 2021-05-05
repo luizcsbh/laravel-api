@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'America/Sao_Paulo',
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -226,9 +226,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'ZipCode' => Canducci\ZipCode\Facades\ZipCode::class,
-        'Address' => Canducci\ZipCode\Facades\ZipCodeAddress::class,
-
+        'ZipCode'   => Canducci\ZipCode\Facades\ZipCode::class,
+        'Address'   => Canducci\ZipCode\Facades\ZipCodeAddress::class,
     ],
 
 ];

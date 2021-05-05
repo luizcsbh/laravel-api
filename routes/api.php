@@ -2,34 +2,24 @@
 
 use Illuminate\Http\Request;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+Route::get("customers", "CustomersController@index");
+Route::get("customers/{customer}", "CustomersController@show");
+Route::post("customers", "CustomersController@store");
+Route::patch("customers/{customer}", "CustomersController@update");
+Route::delete("customers/{customer}", "CustomersController@destroy");
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get("products", "ProductsController@index");
+Route::get("products/{product}", "ProductsController@show");
+Route::post("products", "ProductsController@store");
+Route::patch("products/{product}", "ProductsController@update");
+Route::delete("products/{product}", "ProductsController@destroy");
 
-Route::group(array('api'), function()
-{
+Route::get("orders", "OrdersController@index");
+Route::get("orders/{order}", "OrdersController@show");
+Route::post("orders", "OrdersController@store");
+Route::patch("orders/{order}", "OrdersController@update");
 
-  Route::get('/', function () {
-      return response()->json(['message' => 'API Laravel', 'status' => 'Connected']);;
-  });
-
-  Route::resource('clientes', 'ClientesController');
-  Route::resource('pedidos', 'PedidosController');
-  Route::resource('produtos', 'ProdutosController');
-  
-});
-
-Route::get('/', function () {
-    return redirect('api');
-});
+Route::get("ordereditens", "OrderedItensController@index");
+Route::get("ordereditens/{ordereditem}", "OrderedItensController@show");
+Route::post("ordereditens", "OrderedItensController@store");
+Route::patch("ordereditens/{ordereditem}", "OrderedItensController@update");

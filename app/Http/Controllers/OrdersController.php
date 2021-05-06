@@ -14,7 +14,7 @@ class OrdersController extends Controller
             return response()->json([
                 'info'=>'sucess',
                 'result' =>Order::all()
-            ]);
+            ], 200);
         } catch(Exception $e) {
             return response()->json([
                 'info' =>'error',
@@ -42,7 +42,7 @@ class OrdersController extends Controller
             return response()->json([
                 'info'=>'success',
                 'result'=>$order
-            ]);
+            ], 201);
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
@@ -58,7 +58,7 @@ class OrdersController extends Controller
             return response()->json([
                 'info'=>'success',
                 'result'=>$order
-            ]);
+            ], 200);
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
@@ -86,7 +86,7 @@ class OrdersController extends Controller
             return response()->json([
                 'info'=>'success',
                 'result'=>$order
-            ]);
+            ], 201);
             
         } else {
             return response()->json([

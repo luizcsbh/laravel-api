@@ -11,14 +11,15 @@ class Order extends Model
     protected $primaryKey = 'orders_id';
     protected $date = ['deleted_at'];
 
-    function customer()
+    public function customer()
     {
-        return $this->basMany(Customer::class, 'customers_id', 'customers_id');
+        return $this->belongsTo(Customer::class, 'foreign_key', 'customers_id');
     }
 
-    // function product()
-    // {
-    //     return $this->hasMany('Product');
-    // }
+    public function itens()
+    {
+        return $this->hasMany(Itens::class);
+    }
+
 
 }

@@ -16,7 +16,7 @@ class CustomersController extends Controller
             return response()->json([
                 'info'=>'sucess',
                 'result' =>Customer::all()
-            ]);
+            ], 200);
         } catch(Exception $e) {
             return response()->json([
                 'info' =>'error',
@@ -48,7 +48,7 @@ class CustomersController extends Controller
             return response()->json([
                 'info'=>'success',
                 'result'=>$customer
-            ]);
+            ], 201);
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
@@ -64,7 +64,7 @@ class CustomersController extends Controller
             return response()->json([
                 'info'=>'success',
                 'result'=>$customer
-            ]);
+            ], 200);
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
@@ -96,7 +96,7 @@ class CustomersController extends Controller
             return response()->json([
                 'info'=>'success',
                 'result'=>$customer
-            ]);
+            ], 201);
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
@@ -113,7 +113,7 @@ class CustomersController extends Controller
            return response()->json([
                'info'=>['success'=>'Cliente removido!'],
                'result'=>$customer->delete()
-           ]);
+           ], 200);
 
        } catch (Exception $e) {
            return response()->json([

@@ -11,4 +11,9 @@ class Product extends Model
     protected $primaryKey = 'products_id';
     protected $dates = ['deleted_at'];
 
+    public function itens()
+    {
+        return $this->hasMany(Item::class);
+    }
+
 }

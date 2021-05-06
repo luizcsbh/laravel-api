@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 
 class CustomersTableSeeder extends Seeder
 {
-    
+
     public function run()
     {
         factory(Customer::class)->create([
@@ -29,5 +29,13 @@ class CustomersTableSeeder extends Seeder
             'cep'=>'31035201',
             'address'=>'Rua Cláudio da Silva	Horto Florestal	Belo Horizonte/MG'
         ]);
+
+        factory(Customer::class)->create([
+            'name'=>'Pedro',
+            'email'=>'pedro@hotmail.com',
+            'cep'=>'31230120',
+            'address'=>''
+        ]);
     }
+
 }

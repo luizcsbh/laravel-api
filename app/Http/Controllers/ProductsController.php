@@ -14,7 +14,7 @@ class ProductsController extends Controller
             return response()->json([
                 'info'=>'sucess',
                 'result' =>Product::all()
-            ]);
+            ], 200);
         } catch(Exception $e) {
             return response()->json([
                 'info' =>'error',
@@ -45,7 +45,7 @@ class ProductsController extends Controller
             return response()->json([
                 'info'=>'success',
                 'result'=>$product
-            ]);
+            ], 201);
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
@@ -61,7 +61,7 @@ class ProductsController extends Controller
             return response()->json([
                 'info'=>'success',
                 'result'=>$product
-            ]);
+            ], 200);
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
@@ -91,7 +91,7 @@ class ProductsController extends Controller
             return response()->json([
                 'info'=>'success',
                 'result'=>$product
-            ]);
+            ], 201);
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
@@ -108,7 +108,7 @@ class ProductsController extends Controller
            return response()->json([
                'info'=>['success'=>'Produto removido!'],
                'result'=>$product->delete()
-           ]);
+           ], 200);
 
        } catch (Exception $e) {
            return response()->json([

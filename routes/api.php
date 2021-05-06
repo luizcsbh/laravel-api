@@ -19,7 +19,7 @@ Route::get("orders/{order}", "OrdersController@show");
 Route::post("orders", "OrdersController@store");
 Route::patch("orders/{order}", "OrdersController@update");
 
-Route::get("ordereditens", "OrderedItensController@index");
-Route::get("ordereditens/{ordereditem}", "OrderedItensController@show");
-Route::post("ordereditens", "OrderedItensController@store");
-Route::patch("ordereditens/{ordereditem}", "OrderedItensController@update");
+Route::get("itens", "ItensController@index");
+Route::get("itens/{item}", "ItensController@show");
+Route::post("itens", "ItensController@store");
+Route::patch("itens/{item}", "ItensController@update");

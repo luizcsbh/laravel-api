@@ -5,11 +5,19 @@ use Illuminate\Database\Seeder;
 
 class OrdersTableSeeder extends Seeder
 {
-    
+
     public function run()
     {
+        
         factory(Order::class)->create([
             'customers_id'=>1,
+            'order_date'=>'2021-05-06',
+            'finished'=>0,
+
+        ]);
+
+        factory(Order::class)->create([
+            'customers_id'=>3,
             'order_date'=>'2021-05-05',
             'finished'=>1,
 
@@ -20,5 +28,12 @@ class OrdersTableSeeder extends Seeder
             'order_date'=>'2021-05-05',
             'finished'=>0,
         ]);
+
+        factory(Order::class)->create([
+            'customers_id'=>1,
+            'order_date'=>'2021-05-05',
+            'finished'=>0,
+        ]);
     }
+
 }

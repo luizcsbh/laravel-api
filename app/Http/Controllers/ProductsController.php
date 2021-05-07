@@ -24,6 +24,22 @@ class ProductsController extends Controller
         }
     }
 
+    public function show(Product $product)
+    {
+        try {
+            return response()->json([
+                'info'=>'success',
+                'result'=>$product
+            ], 200);
+        } catch (Exception $e) {
+            return response()->json([
+                'info'=>'error',
+                'message'=>'Não foi possível recuperar os dados do Produto',
+                'error'=>$e->getMessage(),
+            ], 400);
+        }
+    }
+
     public function store(Request $request)
     {
         try {
@@ -51,22 +67,6 @@ class ProductsController extends Controller
             return response()->json([
                 'info'=>'error',
                 'message'=>'Não foi possível gravar os dados do Produto',
-                'error'=>$e->getMessage(),
-            ], 400);
-        }
-    }
-
-    public function show(Product $product)
-    {
-        try {
-            return response()->json([
-                'info'=>'success',
-                'result'=>$product
-            ], 200);
-        } catch (Exception $e) {
-            return response()->json([
-                'info'=>'error',
-                'message'=>'Não foi possível recuperar os dados do Produto',
                 'error'=>$e->getMessage(),
             ], 400);
         }

@@ -24,6 +24,22 @@ class OrdersController extends Controller
         }
     }
 
+    public function show(Order $order)
+    {
+        try {
+            return response()->json([
+                'info'=>'success',
+                'result'=>$order
+            ], 200);
+        } catch (Exception $e) {
+            return response()->json([
+                'info'=>'error',
+                'message'=>'Não foi possível recuperar os dados do Pedido',
+                'error'=>$e->getMessage(),
+            ], 400);
+        }
+    }
+
     public function store(Request $request)
     {
         try {
@@ -47,22 +63,6 @@ class OrdersController extends Controller
             return response()->json([
                 'info'=>'error',
                 'message'=>'Não foi possível gravar os dados do Pedido',
-                'error'=>$e->getMessage(),
-            ], 400);
-        }
-    }
-
-    public function show(Order $order)
-    {
-        try {
-            return response()->json([
-                'info'=>'success',
-                'result'=>$order
-            ], 200);
-        } catch (Exception $e) {
-            return response()->json([
-                'info'=>'error',
-                'message'=>'Não foi possível recuperar os dados do Pedido',
                 'error'=>$e->getMessage(),
             ], 400);
         }

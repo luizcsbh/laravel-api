@@ -26,6 +26,22 @@ class CustomersController extends Controller
         }
     }
 
+    public function show(Customer $customer)
+    {
+        try {
+            return response()->json([
+                'info'=>'success',
+                'result'=>$customer
+            ], 200);
+        } catch (Exception $e) {
+            return response()->json([
+                'info'=>'error',
+                'message'=>'Não foi possível recuperar os dados do Cliente',
+                'error'=>$e->getMessage(),
+            ], 400);
+        }
+    }
+
     public function store(Request $request)
     {
         try {
@@ -47,28 +63,12 @@ class CustomersController extends Controller
 
             return response()->json([
                 'info'=>'success',
-                'result'=>$customer
+                'message'=>'Cliente gravado com sucesso!'
             ], 201);
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
                 'message'=>'Não foi possível gravar os dados do Cliente',
-                'error'=>$e->getMessage(),
-            ], 400);
-        }
-    }
-
-    public function show(Customer $customer)
-    {
-        try {
-            return response()->json([
-                'info'=>'success',
-                'result'=>$customer
-            ], 200);
-        } catch (Exception $e) {
-            return response()->json([
-                'info'=>'error',
-                'message'=>'Não foi possível recuperar os dados do Cliente',
                 'error'=>$e->getMessage(),
             ], 400);
         }

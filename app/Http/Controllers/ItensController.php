@@ -43,7 +43,7 @@ class ItensController extends Controller
 
     public function store(Request $request)
     {
-       
+
         $finish = Order::select(['finished'])
                     ->where('orders_id',$request->orders_id)
                     ->get();

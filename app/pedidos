@@ -1,0 +1,730 @@
+{
+	"id": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+	"name": "API Pedidos",
+	"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+	"order": [],
+	"folders": [
+		{
+			"name": "Customers",
+			"description": "Clientes",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"order": [
+				"21c5db5d-b32f-c9d3-8565-6f44193e509e",
+				"383654f2-1c9f-b11f-6961-08859097bb13",
+				"a44be296-1fa0-521c-ad10-28c4131bcbf2",
+				"044e270a-bde0-8358-2b1c-2857df382643",
+				"de44a53b-1df0-49ec-163f-6f10c6ace270"
+			],
+			"owner": "79464",
+			"folders_order": [],
+			"id": "b44391ec-9c29-ac43-10c0-b3dea6ebd9fe"
+		},
+		{
+			"name": "Itens",
+			"description": "Itens de um pedido",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"order": [
+				"7fb06152-20fd-d7ad-143f-d5506ad35601",
+				"2426b72a-0ddf-200b-cae9-9a7ab14fb045",
+				"f77e797c-a502-64ce-f8ad-50fff560e81a",
+				"75bba750-5eb2-f45b-13d6-e8dbf7a14685",
+				"8aad68bb-7bd3-9a69-b321-c30503cbbfd7"
+			],
+			"owner": "79464",
+			"folders_order": [],
+			"id": "62f59a5e-d2ca-9e74-2c98-b12d2d4a78f7"
+		},
+		{
+			"name": "Order",
+			"description": "Pedido",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"order": [
+				"ff05933a-6397-58ec-33f6-6ac1583d349c",
+				"954f5e35-a9d1-4fda-7a2f-7db9f3f54a05",
+				"a307f1f1-d554-ccc9-f644-45c1edcaca4b",
+				"34b142db-2c66-8cac-2011-297e6001567d"
+			],
+			"owner": "79464",
+			"folders_order": [],
+			"id": "7655e7ad-a09c-a2f6-1702-fa08f61a37d0"
+		},
+		{
+			"name": "Products",
+			"description": "Produtos que compõem um pedido",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"order": [
+				"30ee3a62-64b3-5055-b2ca-abd20fccf12b",
+				"d96396c1-23b8-b106-da9b-570bbba10133",
+				"0a8470aa-fb7a-a8d7-1f52-474f1f757647",
+				"3cb60706-3cf2-8ab0-5d85-55e52a3aab17"
+			],
+			"owner": "79464",
+			"folders_order": [],
+			"id": "e13fdf1c-dd1c-d0e4-1194-48573e7bff91"
+		}
+	],
+	"folders_order": [
+		"b44391ec-9c29-ac43-10c0-b3dea6ebd9fe",
+		"e13fdf1c-dd1c-d0e4-1194-48573e7bff91",
+		"7655e7ad-a09c-a2f6-1702-fa08f61a37d0",
+		"62f59a5e-d2ca-9e74-2c98-b12d2d4a78f7"
+	],
+	"timestamp": 1620348759248,
+	"owner": "79464",
+	"public": false,
+	"requests": [
+		{
+			"id": "044e270a-bde0-8358-2b1c-2857df382643",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/customers/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PATCH",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": [
+				{
+					"key": "name",
+					"value": "Luiz Carlos",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "luizcsbh@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "cep",
+					"value": "31150-710",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "address",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8000/api/customers/1",
+			"description": "Alterar um cliente por id",
+			"descriptionFormat": "html",
+			"time": 1620217381566,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"collection_id": "8c125f6a-9de7-7a7f-68e5-81f69d527c35",
+			"folder": "b44391ec-9c29-ac43-10c0-b3dea6ebd9fe"
+		},
+		{
+			"id": "0a8470aa-fb7a-a8d7-1f52-474f1f757647",
+			"headers": "//Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8000/api/products",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": [
+				{
+					"key": "name",
+					"value": "Chuteira",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "description",
+					"value": "Chuteira Nike Adventure",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "147.99",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "store",
+					"value": "15",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8000/api/products",
+			"description": "Adiciona um produto",
+			"descriptionFormat": "html",
+			"time": 1620238760602,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "e13fdf1c-dd1c-d0e4-1194-48573e7bff91"
+		},
+		{
+			"id": "21c5db5d-b32f-c9d3-8565-6f44193e509e",
+			"url": "http://localhost:8000/api/customers",
+			"method": "GET",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"name": "http://localhost:8000/api/customers",
+			"folder": "b44391ec-9c29-ac43-10c0-b3dea6ebd9fe"
+		},
+		{
+			"id": "2426b72a-0ddf-200b-cae9-9a7ab14fb045",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/itens/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/itens/1",
+			"description": "Retorna Itens de um pedido por id",
+			"descriptionFormat": "html",
+			"time": 1620327853621,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "62f59a5e-d2ca-9e74-2c98-b12d2d4a78f7"
+		},
+		{
+			"id": "30ee3a62-64b3-5055-b2ca-abd20fccf12b",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/products",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/products",
+			"description": "Todos os produtos",
+			"descriptionFormat": "html",
+			"time": 1620238258221,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"isFromCollection": true,
+			"collectionRequestId": "ed952f31-dd8c-34f1-7d20-ab3a447b1451",
+			"folder": "e13fdf1c-dd1c-d0e4-1194-48573e7bff91"
+		},
+		{
+			"id": "34b142db-2c66-8cac-2011-297e6001567d",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/orders/14",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PATCH",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": [
+				{
+					"key": "customers_id",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "order_date",
+					"value": "2021-05-04",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "finished",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8000/api/orders/14",
+			"description": "Alterando um Pedido",
+			"descriptionFormat": "html",
+			"time": 1620257064216,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "7655e7ad-a09c-a2f6-1702-fa08f61a37d0"
+		},
+		{
+			"id": "383654f2-1c9f-b11f-6961-08859097bb13",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/customers/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/customers/1",
+			"description": "Retorna um cliente por id",
+			"descriptionFormat": "html",
+			"time": 1620217326574,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"collection_id": "8c125f6a-9de7-7a7f-68e5-81f69d527c35",
+			"isFromCollection": true,
+			"collectionRequestId": "c1fc69b2-5c4e-9870-681b-98e90bd8dee3",
+			"folder": "b44391ec-9c29-ac43-10c0-b3dea6ebd9fe"
+		},
+		{
+			"id": "3cb60706-3cf2-8ab0-5d85-55e52a3aab17",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/products/2",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/products/2",
+			"description": "Deleta um produto por id",
+			"descriptionFormat": "html",
+			"time": 1620239027749,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "e13fdf1c-dd1c-d0e4-1194-48573e7bff91"
+		},
+		{
+			"id": "75bba750-5eb2-f45b-13d6-e8dbf7a14685",
+			"headers": "//Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8000/api/itens/3",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PATCH",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": [
+				{
+					"key": "orders_id",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "products_id",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "amount",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8000/api/itens/3",
+			"description": "Alterar um itens no Pedido",
+			"descriptionFormat": "html",
+			"time": 1620352739809,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "62f59a5e-d2ca-9e74-2c98-b12d2d4a78f7"
+		},
+		{
+			"id": "7fb06152-20fd-d7ad-143f-d5506ad35601",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/itens",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/itens",
+			"description": "Retorna todos os itens de um Pedido",
+			"descriptionFormat": "html",
+			"time": 1620327757373,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "62f59a5e-d2ca-9e74-2c98-b12d2d4a78f7"
+		},
+		{
+			"id": "8aad68bb-7bd3-9a69-b321-c30503cbbfd7",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/itens/2",
+			"folder": "62f59a5e-d2ca-9e74-2c98-b12d2d4a78f7",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1620352958626,
+			"name": "http://localhost:8000/api/itens/2",
+			"description": "Remove itens de um Pedido",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"responses": []
+		},
+		{
+			"id": "954f5e35-a9d1-4fda-7a2f-7db9f3f54a05",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/orders/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/orders/1",
+			"description": "Retorna um Pedido por id",
+			"descriptionFormat": "html",
+			"time": 1620256887922,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "7655e7ad-a09c-a2f6-1702-fa08f61a37d0"
+		},
+		{
+			"id": "a307f1f1-d554-ccc9-f644-45c1edcaca4b",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/orders",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": [
+				{
+					"key": "customers_id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "order_date",
+					"value": "2021-05-06",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "finished",
+					"value": "0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "store",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8000/api/orders",
+			"description": "Inserindo um pedido",
+			"descriptionFormat": "html",
+			"time": 1620257008278,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "7655e7ad-a09c-a2f6-1702-fa08f61a37d0"
+		},
+		{
+			"id": "a44be296-1fa0-521c-ad10-28c4131bcbf2",
+			"headers": "//Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8000/api/customers",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "name",
+					"value": "João Antonio",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "joaoantonio@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "cep",
+					"value": "31130710",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "address",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"time": 1620338145561,
+			"name": "http://localhost:8000/api/customers",
+			"description": "Adiciona um cliente",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"responses": [],
+			"collection_id": "8c125f6a-9de7-7a7f-68e5-81f69d527c35",
+			"folder": "b44391ec-9c29-ac43-10c0-b3dea6ebd9fe"
+		},
+		{
+			"id": "d96396c1-23b8-b106-da9b-570bbba10133",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/products/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/products/1",
+			"description": "Produto por id",
+			"descriptionFormat": "html",
+			"time": 1620238591382,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "e13fdf1c-dd1c-d0e4-1194-48573e7bff91"
+		},
+		{
+			"id": "de44a53b-1df0-49ec-163f-6f10c6ace270",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/customers/2",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/customers/2",
+			"description": "Deleta um cliente por id",
+			"descriptionFormat": "html",
+			"time": 1620217405741,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"collection_id": "8c125f6a-9de7-7a7f-68e5-81f69d527c35",
+			"folder": "b44391ec-9c29-ac43-10c0-b3dea6ebd9fe"
+		},
+		{
+			"id": "f77e797c-a502-64ce-f8ad-50fff560e81a",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/itens",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": [
+				{
+					"key": "orders_id",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "products_id",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "amount",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8000/api/itens/3",
+			"description": "Adiciona itens no Pedido",
+			"descriptionFormat": "html",
+			"time": 1620350055614,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "62f59a5e-d2ca-9e74-2c98-b12d2d4a78f7"
+		},
+		{
+			"id": "ff05933a-6397-58ec-33f6-6ac1583d349c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/orders",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/orders",
+			"description": "Retorna todas os Pedidos",
+			"descriptionFormat": "html",
+			"time": 1620256822857,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "7655e7ad-a09c-a2f6-1702-fa08f61a37d0"
+		}
+	]
+}

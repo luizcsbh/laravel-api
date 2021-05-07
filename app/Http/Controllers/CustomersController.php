@@ -20,7 +20,7 @@ class CustomersController extends Controller
         } catch(Exception $e) {
             return response()->json([
                 'info' =>'error',
-                'result' =>'Não foi possível retornar os dados do Clientes',
+                'message' =>'Não foi possível retornar os dados do Clientes',
                 'error' =>$e->getMessage(),
             ], 400);
         }
@@ -52,7 +52,7 @@ class CustomersController extends Controller
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
-                'result'=>'Não foi possível gravar os dados do Cliente',
+                'message'=>'Não foi possível gravar os dados do Cliente',
                 'error'=>$e->getMessage(),
             ], 400);
         }
@@ -68,7 +68,7 @@ class CustomersController extends Controller
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
-                'result'=>'Não foi possível recuperar os dados do Cliente',
+                'message'=>'Não foi possível recuperar os dados do Cliente',
                 'error'=>$e->getMessage(),
             ], 400);
         }
@@ -76,7 +76,7 @@ class CustomersController extends Controller
 
     public function update(Request $request, Customer $customer)
     {
-        
+
         try {
             $request->validate([
                 'name'=>'required|max:100',
@@ -91,11 +91,10 @@ class CustomersController extends Controller
             $zipCodeInfo = ZipCode::find($request->input('cep'), true);
             $json = $zipCodeInfo->getJson();
             $customer->address = $json;
-            $customer->save();
             
             return response()->json([
                 'info'=>'success',
-                'result'=>$customer
+                'result'=>$customer->save()
             ], 201);
         } catch (Exception $e) {
             return response()->json([
@@ -111,14 +110,15 @@ class CustomersController extends Controller
     {
        try {
            return response()->json([
-               'info'=>['success'=>'Cliente removido!'],
+               'info'=>'success',
+               'message'=>'Cliente removido!',
                'result'=>$customer->delete()
            ], 200);
 
        } catch (Exception $e) {
            return response()->json([
                'info'=>'error',
-               'result'=>'Não foi possível retornar os dados do Cliente',
+               'message'=>'Não foi possível retornar os dados do Cliente',
                'error'=>$e->getMessage(),
            ], 400);
        }

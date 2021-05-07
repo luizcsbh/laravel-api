@@ -11,7 +11,7 @@ class ItensTableSeeder extends Seeder
         factory(Item::class)->create([
             'orders_id'=>1,
             'products_id'=>2,
-            'amount'=>1,
+            'amount'=>2,
         ]);
         factory(Item::class)->create([
             'orders_id'=>1,
@@ -21,12 +21,12 @@ class ItensTableSeeder extends Seeder
         factory(Item::class)->create([
             'orders_id'=>2,
             'products_id'=>5,
-            'amount'=>1,
+            'amount'=>2,
         ]);
         factory(Item::class)->create([
             'orders_id'=>3,
             'products_id'=>6,
-            'amount'=>1,
+            'amount'=>2,
         ]);
     }
 

@@ -15,7 +15,6 @@ class CreateItensTable extends Migration
             $table->integer('orders_id')->unsigned()->index();
             $table->integer('products_id')->unsigned()->index();
             $table->integer('amount');
-            
             $table->timestamps();
 
             $table->foreign('orders_id')

@@ -14,7 +14,6 @@ class CreateProductsTable extends Migration
             $table->string('name', 100);
             $table->string('description',250);
             $table->float('price', 2,0,8);
-            $table->integer('store');
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';

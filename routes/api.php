@@ -23,3 +23,4 @@ Route::get("itens", "ItensController@index");
 Route::get("itens/{item}", "ItensController@show");
 Route::post("itens", "ItensController@store");
 Route::patch("itens/{item}", "ItensController@update");
+Route::delete("itens/{item}", "ItensController@destroy");

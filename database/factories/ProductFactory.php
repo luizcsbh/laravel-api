@@ -10,6 +10,5 @@ $factory->define(Product::class, function (Faker $faker) {
         'name'=>$faker->name,
         'description'=>$faker->paragraph(),
         'price'=>$faker->randomNumber(2),
-        'store'=>Str::random(10),
     ];
 });

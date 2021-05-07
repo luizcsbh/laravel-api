@@ -18,7 +18,7 @@ class OrdersController extends Controller
         } catch(Exception $e) {
             return response()->json([
                 'info' =>'error',
-                'result' =>'Não foi possível retornar os dados do Pedido',
+                'message' =>'Não foi possível retornar os dados do Pedido',
                 'error' =>$e->getMessage(),
             ], 400);
         }
@@ -46,7 +46,7 @@ class OrdersController extends Controller
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
-                'result'=>'Não foi possível gravar os dados do Pedido',
+                'message'=>'Não foi possível gravar os dados do Pedido',
                 'error'=>$e->getMessage(),
             ], 400);
         }
@@ -62,7 +62,7 @@ class OrdersController extends Controller
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
-                'result'=>'Não foi possível recuperar os dados do Pedido',
+                'message'=>'Não foi possível recuperar os dados do Pedido',
                 'error'=>$e->getMessage(),
             ], 400);
         }
@@ -82,16 +82,16 @@ class OrdersController extends Controller
             $order->order_date = $request->input('order_date');
             $order->finished = $request->input('finished');
             $order->save();
-
             return response()->json([
                 'info'=>'success',
-                'result'=>$order
+                'message' =>'Pedido alterado com sucesso!',
+                'result'=>$order,
             ], 201);
             
         } else {
             return response()->json([
                 'info'=>'error',
-                'result'=>'Não foi possível alterar os dados do Pedido',
+                'message'=>'Não foi possível alterar os dados do Pedido',
                 
             ], 400);
         }

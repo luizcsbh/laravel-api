@@ -17,9 +17,9 @@ class ProductsController extends Controller
             ], 200);
         } catch(Exception $e) {
             return response()->json([
-                'info' =>'error',
-                'result' =>'Não foi possível retornar os dados do Produto',
-                'error' =>$e->getMessage(),
+                'info'=>'error',
+                'message'=>'Não foi possível retornar os dados do Produto',
+                'error'=>$e->getMessage(),
             ], 400);
         }
     }
@@ -44,12 +44,13 @@ class ProductsController extends Controller
 
             return response()->json([
                 'info'=>'success',
+                'message'=>'Produto gravado com sucesso!',
                 'result'=>$product
             ], 201);
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
-                'result'=>'Não foi possível gravar os dados do Produto',
+                'message'=>'Não foi possível gravar os dados do Produto',
                 'error'=>$e->getMessage(),
             ], 400);
         }
@@ -65,7 +66,7 @@ class ProductsController extends Controller
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
-                'result'=>'Não foi possível recuperar os dados do Produto',
+                'message'=>'Não foi possível recuperar os dados do Produto',
                 'error'=>$e->getMessage(),
             ], 400);
         }
@@ -90,12 +91,13 @@ class ProductsController extends Controller
 
             return response()->json([
                 'info'=>'success',
+                'message'=>'Produto alterado com sucesso!',
                 'result'=>$product
             ], 201);
         } catch (Exception $e) {
             return response()->json([
                 'info'=>'error',
-                'result'=>'Não foi possível alterar dados do Produto',
+                'message'=>'Não foi possível alterar dados do Produto',
                 'error'=>$e->getMessage(),
             ], 400);
         }
@@ -106,14 +108,15 @@ class ProductsController extends Controller
     {
        try {
            return response()->json([
-               'info'=>['success'=>'Produto removido!'],
+               'info'=>'success',
+               'message'=>'Produto removido!',
                'result'=>$product->delete()
            ], 200);
 
        } catch (Exception $e) {
            return response()->json([
                'info'=>'error',
-               'result'=>'Não foi possível retornar os dados do Produto',
+               'message'=>'Não foi possível retornar os dados do Produto',
                'error'=>$e->getMessage(),
            ], 400);
        }

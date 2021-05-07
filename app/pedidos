@@ -123,7 +123,7 @@
 			],
 			"dataMode": "urlencoded",
 			"name": "http://localhost:8000/api/customers/1",
-			"description": "ALterar um cliente por id",
+			"description": "Alterar um cliente por id",
 			"descriptionFormat": "html",
 			"time": 1620217381566,
 			"version": 2,

@@ -6,7 +6,7 @@
 	"folders": [
 		{
 			"name": "Customers",
-			"description": "",
+			"description": "Clientes",
 			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
 			"order": [
 				"21c5db5d-b32f-c9d3-8565-6f44193e509e",
@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "Itens",
-			"description": "",
+			"description": "Itens de um pedido",
 			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
 			"order": [
 				"7fb06152-20fd-d7ad-143f-d5506ad35601",
@@ -36,7 +36,7 @@
 		},
 		{
 			"name": "Order",
-			"description": "",
+			"description": "Pedido",
 			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
 			"order": [
 				"ff05933a-6397-58ec-33f6-6ac1583d349c",
@@ -50,7 +50,7 @@
 		},
 		{
 			"name": "Products",
-			"description": "",
+			"description": "Produtos que compõem um pedido",
 			"collectionId": "cbca9ea4-3679-d161-8d1d-05a1a6145f05",
 			"order": [
 				"30ee3a62-64b3-5055-b2ca-abd20fccf12b",

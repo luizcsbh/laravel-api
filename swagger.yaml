@@ -1,0 +1,488 @@
+swagger: '2.0'
+info:
+  description: API de criação de pedidos de compras
+  version: 1.0.0
+  title: API Pedidos
+  # put the contact info for your development or API team
+  contact:
+    email: luizcsdev@gmail.com
+
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+# tags are used for organizzing operations
+tags:
+- name: cliente
+  description: Gerenciamento dos clientes
+- name: produto
+  description: Gerenciamento dos produtos
+- name: pedido
+  description: Gerenciamento dos Pedidos
+- name: itens
+  description: Gerenciamento dos Itens dos Pedidos
+paths:
+  /api/customers:
+    get:
+      tags:
+      - cliente
+      description: Listagem de todos os clientes
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: Resultado da busca
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Customer'
+        400:
+          description: bad input parameter
+    post:
+      tags:
+      - cliente
+      description: Cadastro de um Cliente
+      parameters:
+      - in: body
+        name: body
+        description: Cliente que será cadastrado
+        required: true
+        schema:
+          $ref: '#/definitions/Customer'
+      responses:
+        201:
+          description: OK
+  /api/customers/{id}:
+    get:
+      tags:
+      - cliente
+      description: Listage de um Cliente
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Código de um Cliente
+        required: true
+        type: string
+      responses:
+        200:
+          description: Resultado da busca
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Customer'
+    put:
+      tags:
+      - cliente
+      description: Atualização de um Cliente
+      parameters:
+      - name: id
+        in: path
+        description: Id do Cliente
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: Cliente que será atualizado
+        required: true
+        schema:
+          $ref: '#/definitions/Customer'
+      responses:
+        200:
+          description: OK
+    delete:
+      tags:
+      - cliente
+      descrption: Exclusão de um Cliente
+      parameters:
+      - name: id
+        in: path
+        description: Id do Cliente
+        required: true
+        type: string
+      reponses:
+        204:
+          description: OK
+        400:
+          description: Cliente inválido
+        404:
+          description: Cliente não encontrado
+  /api/products:
+    get:
+      tags:
+      - produto
+      description: Listagem de todos os produtos
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: Resultado da busca
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Product'
+        400:
+          description: bad input parameter
+    post:
+      tags:
+      - produto
+      description: Cadastro de um Cliente
+      parameters:
+      - in: body
+        name: body
+        description: Cliente que será cadastrado
+        required: true
+        schema:
+          $ref: '#/definitions/Customer'
+      responses:
+        201:
+          description: OK
+  /api/produto/{id}:
+    get:
+      tags:
+      - produto
+      description: Listagem de um Produto
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Código de um Produto
+        required: true
+        type: string
+      responses:
+        200:
+          description: Resultado da busca
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Product'
+    put:
+      tags:
+      - produto
+      description: Atualização de um Produto
+      parameters:
+      - name: id
+        in: path
+        description: Id do Produto
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: Produot que será atualizado
+        required: true
+        schema:
+          $ref: '#/definitions/Product'
+      responses:
+        200:
+          description: OK
+    delete:
+      tags:
+      - produto
+      descrption: Exclusão de um Produto
+      parameters:
+      - name: id
+        in: path
+        description: Id do Produto
+        required: true
+        type: string
+      reponses:
+        204:
+          description: OK
+        400:
+          description: Produto inválido
+        404:
+          description: Produto não encontrado
+  /api/orders:
+    get:
+      tags:
+      - pedido
+      description: Listagem de todos os pedidos
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: Resultado da busca
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Order'
+        400:
+          description: bad input parameter
+    post:
+      tags:
+      - pedido
+      description: Cadastro de um Pedido
+      parameters:
+      - in: body
+        name: body
+        description: Pedido que será cadastrado
+        required: true
+        schema:
+          $ref: '#/definitions/Order'
+      responses:
+        201:
+          description: OK
+  /api/orders/{id}:
+    get:
+      tags:
+      - pedido
+      description: Listage de um Pedido
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Código de um Pedido
+        required: true
+        type: string
+      responses:
+        200:
+          description: Resultado da busca
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Order'
+    put:
+      tags:
+      - pedido
+      description: Atualização de um Pedido
+      parameters:
+      - name: id
+        in: path
+        description: Id do Pedido
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: Pedido que será atualizado
+        required: true
+        schema:
+          $ref: '#/definitions/Order'
+      responses:
+        200:
+          description: OK
+  /api/itens:
+    get:
+      tags:
+      - itens
+      description: Listagem de todos os itens
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: Resultado da busca
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Iten'
+        400:
+          description: bad input parameter
+    post:
+      tags:
+      - itens
+      description: Cadastro de um Item
+      parameters:
+      - in: body
+        name: body
+        description: Item que será cadastrado
+        required: true
+        schema:
+          $ref: '#/definitions/Iten'
+      responses:
+        201:
+          description: OK
+  /api/itens/{id}:
+    get:
+      tags:
+      - itens
+      description: Listage de um Item
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        description: Código de um Item
+        required: true
+        type: string
+      responses:
+        200:
+          description: Resultado da busca
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Iten'
+    put:
+      tags:
+      - itens
+      description: Atualização de um Item do Pedido
+      parameters:
+      - name: id
+        in: path
+        description: Id do Item do Pedido
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: Item que será atualizado
+        required: true
+        schema:
+          $ref: '#/definitions/Iten'
+      responses:
+        200:
+          description: OK
+    delete:
+      tags:
+      - itens
+      descrption: Exclusão de um Cliente
+      parameters:
+      - name: id
+        in: path
+        description: Id do Item do Pedido
+        required: true
+        type: string
+      reponses:
+        204:
+          description: OK
+        400:
+          description: Item do Pedido inválido
+        404:
+          description: Item do Pedido não encontrado
+definitions:
+  Customer:
+    required: 
+    - name
+    - email
+    - cep
+    properties:
+      customers_id:
+        type: integer
+        format: int64
+        example: 1
+      name:
+        type: string
+        format: name
+        example: Luiz Carlos dos Santos
+      email:
+        type: string
+        format: email
+        example: luizcsdev@gmail.com
+      cep:
+        type: integer
+        format: cep
+        example: 31150710
+      address:
+        type: string
+        format: address
+        example: Avenida Bernardo de Vasconcelos, 816 Cachoeirinha, Belo Horizonte Minas Gerais
+      created_at:
+        type: string
+        format: date-time
+        example: 2021-05-01T09:12:22:.002Z
+      updated_at:
+        type: string
+        format: date-time
+        example: 2021-05-01T09:12:22:.002Z
+      deleted_at:
+        type: string
+        format: date-time
+        example: 2021-05-01T09:12:22:.002Z
+    description: Clientes que realizam pedidos
+  Product:
+    required:
+    - name
+    - description
+    - price
+    properties:
+      products_id:
+        type: integer
+        format: int64
+        example: 1
+      name:
+        type: string
+        format: name
+        example: Tênis Nike
+      description:
+        type: string
+        format: description
+        example: Tênis de corrida Nike
+      price:
+        type: integer
+        format: price
+        example: 100.99
+      created_at:
+        type: string
+        format: date-tme
+        example: 2021-05-01T09:12:22:.002Z
+      updated_at:
+        type: string
+        format: date-tme
+        example: 2021-05-01T09:12:22:.002Z
+    description: Produtos que compõem um pedido
+  Order:
+    type: object
+    required: 
+    - customers_id
+    - order_date
+    - finished
+    properties:
+      orders_id:
+        type: integer
+        format: int64
+        example: 1
+      order_date:
+        type: string
+        format: date-time
+        example: 2021-05-01T09:12:22:.002Z
+      finished:
+        type: integer
+        format: int
+        example: 0
+      created_at:
+        type: string
+        format: date-time
+        example: 2021-05-01T09:12:22:.002Z
+      updated_at:
+        type: string
+        format: date-time
+        example: 2021-05-01T09:12:22:.002Z
+      deleted_at:
+        type: string
+        format: date-time
+        example: 2021-05-01T09:12:22:.002Z
+      customers_id:
+        $ref: '#/definitions/Customer'
+    description: Pedidos dos Clientes
+  Iten:
+    type: object
+    required: 
+    - orders_id
+    - products_id
+    - amount
+    properties:
+      itens_id:
+        type: integer
+        format: int64
+        example: 1
+      amount:
+        type: integer
+        format: int64
+        example: 1
+      created_at:
+        type: string
+        format: date-time
+        example: 2021-05-01T09:12:22:.002Z
+      updated_at:
+        type: string
+        format: date-time
+        example: 2021-05-01T09:12:22:.002Z
+      order_id:
+        $ref: '#/definitions/Order'
+      products_id:
+        $ref: '#/definitions/Product'
+    description: Itens que compõem um pedido

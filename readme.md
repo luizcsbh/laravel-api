@@ -25,7 +25,7 @@ docker-compose run --rm artisan migrate
 
 ## Dúvidas
 
-Se você tiver dúvidas nesse repositorio entre em contato com Luiz Santos via[luizcsdev@laravel.com](mailto:luizcsdev@gmail.com). Todas as dúvidas serão respondidas por e-mail
+Se você tiver dúvidas nesse repositorio entre em contato com Luiz Santos via [luizcsdev@gmail.com](mailto:luizcsdev@gmail.com). Todas as dúvidas serão respondidas por e-mail
 
 ## License
 
